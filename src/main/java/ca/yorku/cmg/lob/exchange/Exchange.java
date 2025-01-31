@@ -113,11 +113,11 @@ public class Exchange {
 			}
 		} else { //order is an ask
 			//Go to the bids half-book and see if there are matching bids (buying offers) and process them
-			oOutcome = ____________.processOrder(o, time);
+			oOutcome = book.getBids().processOrder(o, time);
 			//If the quanity of the unfulfilled order in the outcome is not zero
 			if (oOutcome.getUnfulfilledOrder().getQuantity() > 0) {
 				// Not the entire order was fulfilled, add it to the bid half-book
-			    ;
+			    book.getBids().addOrder((Bid)oOutcome.getUnfulfilledOrder());;
 			}			
 		}
 
