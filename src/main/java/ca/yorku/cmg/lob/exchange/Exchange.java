@@ -61,7 +61,7 @@ public class Exchange {
 		}
 		
 		//Does the trader exist? Check to see if the trader exists 
-		if (getTraderAccount(o.getTrader()) == null) {
+		if (Integer.valueOf(o.getTrader().getID()) == null) {
 			System.err.println("Order validation: trader with ID " + o.getID() + " not registered with the exchange.");
 			return (false);
 		}
