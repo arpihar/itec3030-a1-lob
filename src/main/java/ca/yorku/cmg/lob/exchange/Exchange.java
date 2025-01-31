@@ -55,14 +55,14 @@ public class Exchange {
      */
 	public boolean validateOrder(IOrder o) {
 		// Does ticker exist? See if the security associated with the order exists in the list of securities
-		if (__________________________ == null) {
-			System.err.println("Order validation: ticker " + ______________.getTicker() + " not supported.");
+		if (securities.getSecurityByTicker(o.getSecurity().getTicker()) == null) {
+			System.err.println("Order validation: ticker " + o.getSecurity().getTicker() + " not supported.");
 			return (false);
 		}
 		
 		//Does the trader exist? Check to see if the trader exists 
-		if (__________________________ == null) {
-			System.err.println("Order validation: trader with ID " + _______________.getID() + " not registered with the exchange.");
+		if (getTraderAccount(o.getTrader()) == null) {
+			System.err.println("Order validation: trader with ID " + o.getID() + " not registered with the exchange.");
 			return (false);
 		}
 

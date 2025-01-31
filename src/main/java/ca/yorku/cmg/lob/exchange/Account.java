@@ -19,6 +19,7 @@ import ca.yorku.cmg.lob.tradestandards.ITrade;
  */
 public abstract class Account {
 
+    System.out.println("HEllo");
     /** The {@linkplain ca.yorku.cmg.lob.trader.Trader} associated with this account. */
     private Trader trader;
 
